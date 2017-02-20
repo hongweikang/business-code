@@ -11,3 +11,10 @@
 # For Intellij
 *.iml
 .idea
+
+.DS_Store
+.classpath
+.project
+*.log
+tmp
+log
