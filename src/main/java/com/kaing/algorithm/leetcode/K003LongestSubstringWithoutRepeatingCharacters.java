@@ -17,6 +17,8 @@ import static org.junit.Assert.assertThat;
  * <p>
  * 本题的三个解法都属于 Sliding Window(滑动窗口) 解法
  * 通过维持一个不断滑动的窗口（窗口中的字符一定是unique的）来求解
+ * <p>
+ * https://leetcode.com/problems/longest-substring-without-repeating-characters/
  */
 public class K003LongestSubstringWithoutRepeatingCharacters {
 

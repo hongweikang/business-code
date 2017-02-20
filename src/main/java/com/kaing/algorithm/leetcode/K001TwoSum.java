@@ -9,7 +9,6 @@ import java.util.Map;
 import static org.hamcrest.Matchers.*;
 import static org.junit.Assert.assertThat;
 
-
 /**
  * User: hongweikang
  * Date: 20/02/2017
@@ -19,6 +18,8 @@ import static org.junit.Assert.assertThat;
  * <p>
  * Because nums[0] + nums[1] = 2 + 7 = 9,
  * return [0, 1].
+ * <p>
+ * https://leetcode.com/problems/two-sum
  */
 public class K001TwoSum {
 
