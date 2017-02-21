@@ -49,8 +49,7 @@ public class K004MedianOfTwoSortedArrays {
         }
 
         if ((m + n) % 2 == 0) {
-            return (findKth(nums1, nums2, 0, 0, m, n, k) +
-                    findKth(nums1, nums2, 0, 0, m, n, k + 1)) / 2;
+            return (findKth(nums1, nums2, 0, 0, m, n, k) + findKth(nums1, nums2, 0, 0, m, n, k + 1)) / 2;
         } else {
             return findKth(nums1, nums2, 0, 0, m, n, k + 1);
         }
@@ -102,6 +101,7 @@ public class K004MedianOfTwoSortedArrays {
             // 每次递归要更新数组起始位置（起始位置之前的元素被抛弃），也要更新k的大小（扣除被抛弃的元素）
             return findKth(array1, array2, start1 + p, start2, len1 - p, len2, k - p);
         } else if (array1[start1 + p - 1] > array2[start2 + q - 1]) {
+            // 每次递归要更新数组起始位置（起始位置之前的元素被抛弃），也要更新k的大小（扣除被抛弃的元素）
             return findKth(array1, array2, start1, start2 + q, len1, len2 - q, k - q);
         } else {
             return array1[start1 + p - 1];
