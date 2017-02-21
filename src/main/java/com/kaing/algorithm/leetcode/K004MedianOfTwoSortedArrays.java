@@ -12,7 +12,8 @@ import static org.junit.Assert.assertThat;
  * <p>
  * <p>
  * There are two sorted arrays nums1 and nums2 of size m and n respectively.
- * Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
+ * Find the median of the two sorted arrays.
+ * The overall run time complexity should be O(log (m+n)).
  * <p>
  * Example 1:
  * nums1 = [1, 3]
@@ -23,6 +24,7 @@ import static org.junit.Assert.assertThat;
  * nums1 = [1, 2]
  * nums2 = [3, 4]
  * The median is (2 + 3)/2 = 2.5
+ * <p>
  * <p>
  * http://www.07net01.com/2015/07/871155.html
  * https://leetcode.com/problems/median-of-two-sorted-arrays
@@ -37,6 +39,8 @@ public class K004MedianOfTwoSortedArrays {
      * （2）当n为奇数时，搜寻的是第(n/2+1)个元素
      * （3）当n为偶数时，搜寻的是第(n/2)和第(n/2+1)个元素，然后取二者的均值
      * （4）通过分析（2）和（3），问题就可以抽象为 搜索两个有序序列的第k个元素
+     * <p>
+     * Time complexity : O(log (m+n))
      */
     private double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int m = nums1.length;

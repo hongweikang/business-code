@@ -15,8 +15,19 @@ import static org.junit.Assert.assertThat;
  * Date: 20/02/2017
  * Time: 1:00 PM
  * <p>
- * 本题的三个解法都属于 Sliding Window(滑动窗口) 解法
- * 通过维持一个不断滑动的窗口（窗口中的字符一定是unique的）来求解
+ * （1）本题属于从一个字符串中找出最长不重复字符的连续子串
+ * （2）本题的三个解法都属于 Sliding Window(滑动窗口) 解法
+ * （3）通过维持一个不断滑动的窗口（窗口中的字符一定是unique的）来求解
+ * <p>
+ * Given a string, find the length of the longest substring
+ * without repeating characters.
+ * <p>
+ * Examples:
+ * Given "abcabcbb", the answer is "abc", which the length is 3.
+ * Given "bbbbb", the answer is "b", with the length of 1.
+ * Given "pwwkew", the answer is "wke", with the length of 3.
+ * Note that "pwke" is a sub sequence but not a substring.
+ * <p>
  * <p>
  * https://leetcode.com/problems/longest-substring-without-repeating-characters/
  */
@@ -26,7 +37,8 @@ public class K003LongestSubstringWithoutRepeatingCharacters {
      * （1）将所有字符依次装入list，每次找到当前重复的字符的最后位置
      * （2）重置start，start和list之间的数据就是最长且唯一的字符串
      * <p>
-     * （3）Time complexity : O(n^2)
+     * <p>
+     * Time complexity : O(n^2)
      */
     private int lengthOfLongestSubstring_1(String s) {
 
@@ -55,7 +67,8 @@ public class K003LongestSubstringWithoutRepeatingCharacters {
      * （2）当遇到重复字符时，后一个字符replace前一个字符
      * （3）重置start，start和当前位置i之间的数据就是最长且唯一的字符串
      * <p>
-     * （4）Time complexity : O(n)
+     * <p>
+     * Time complexity : O(n)
      */
     private int lengthOfLongestSubstring_2(String s) {
 
@@ -83,14 +96,13 @@ public class K003LongestSubstringWithoutRepeatingCharacters {
      * （2）用int数组替代map, 相同的字符会映射到数组的同一个下标元素中去！
      * （3）后一个相同字符取代前一个字符在数组的位置，功能和map一致
      * （4）可声明如下大小的int数组
-     * <p>
-     * int[26] for Letters 'a' - 'z' or 'A' - 'Z'
-     * int[128] for ASCII
-     * int[256] for Extended ASCII
-     * <p>
+     * ---- a. int[26] for Letters 'a' - 'z' or 'A' - 'Z'
+     * ---- b.int[128] for ASCII
+     * ---- c.int[256] for Extended ASCII
      * （5）int[] = new int[128]数组中初始的每个元素的值都是0！
      * <p>
-     * （6）Time complexity : O(n)
+     * <p>
+     * Time complexity : O(n)
      */
     private int lengthOfLongestSubstring_3(String s) {
 
