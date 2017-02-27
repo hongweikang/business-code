@@ -1,5 +1,3 @@
-package com.kaing.algorithm.leetcode;
-
 /**
  * User: hongweikang
  * Date: 21/02/2017
@@ -26,5 +24,21 @@ public class Test {
         String s = b.toString();
         s = s.replaceAll("0", "");
         System.out.println(s);
+
+        int c = -123;
+        System.out.println(c / 10);
+        System.out.println(c % 10);
+
+        System.out.println(3 / 10);
+        System.out.println(-3 / 10);
+
+        char d = 'a';
+        System.out.println(d);
+
+        String str = "123";
+        System.out.println(str.charAt(2) - '0');
+        int e = 123;
+        int f = 0 - e;
+        System.out.println(f);
     }
 }
