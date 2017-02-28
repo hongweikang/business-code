@@ -12,8 +12,12 @@ import static org.junit.Assert.assertThat;
  * <p>
  * <p>
  * 将字符串转化为数字，需要考虑空字符、特殊字符、越界等情况
+ * atoi: alphanumeric to integer
  * <p>
  * Implement atoi to convert a string to an integer.
+ * <p>
+ * <p>
+ * https://leetcode.com/problems/string-to-integer-atoi/?tab=Description
  */
 public class K008StringToInteger {
 

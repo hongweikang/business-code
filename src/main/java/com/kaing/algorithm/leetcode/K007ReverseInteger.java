@@ -64,6 +64,7 @@ public class K007ReverseInteger {
         while (x != 0) {
             int tail = x % 10;
             int r2 = r * 10 + tail;
+            // overflow
             if ((r2 - tail) / 10 != r) {
                 return 0;
             }

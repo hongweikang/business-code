@@ -12,6 +12,7 @@ import static org.junit.Assert.assertThat;
  * <p>
  * <p>
  * 本题属于找最长回文子串问题
+ * palindromic: 回文
  * <p>
  * Given a string s, find the longest palindromic substring in s.
  * You may assume that the maximum length of s is 1000.

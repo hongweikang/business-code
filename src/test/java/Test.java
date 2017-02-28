@@ -40,5 +40,20 @@ public class Test {
         int e = 123;
         int f = 0 - e;
         System.out.println(f);
+
+        System.out.println(String.valueOf(123458).length());
+        int g = String.valueOf(123458).length();
+        System.out.println((int) Math.pow(10, g));
+        System.out.println(123458 - (int) Math.pow(10, g - 1));
+        System.out.println(123458 / ((int) Math.pow(10, g - 1)));
+        System.out.println(123458 / ((int) Math.pow(10, g - 2)));
+
+        System.out.println((int) Math.pow(10, 0));
+
+        boolean[][] dp = new boolean[3][3];
+        System.out.println(dp[1][2]);
+
+        String h = "a";
+        System.out.println(h.substring(1).isEmpty());
     }
 }
