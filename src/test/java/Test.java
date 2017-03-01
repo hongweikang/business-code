@@ -55,5 +55,10 @@ public class Test {
 
         String h = "a";
         System.out.println(h.substring(1).isEmpty());
+
+        String i = null;
+        System.out.println(i.isEmpty());
+        i = "";
+        System.out.println(i.isEmpty());
     }
 }
