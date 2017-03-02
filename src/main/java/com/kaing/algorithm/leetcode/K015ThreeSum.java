@@ -40,10 +40,10 @@ public class K015ThreeSum {
      * Time complexity : O(n^2)
      */
     private List<List<Integer>> threeSum(int[] nums) {
-        List<List<Integer>> result = new LinkedList<>();
+        List<List<Integer>> r = new LinkedList<>();
 
         if (nums == null || nums.length < 3) {
-            return result;
+            return r;
         }
 
         // key point
@@ -57,7 +57,7 @@ public class K015ThreeSum {
 
                 while (t2 < t3) {
                     if (nums[t1] + nums[t2] + nums[t3] == 0) {
-                        result.add(Arrays.asList(nums[t1], nums[t2], nums[t3]));
+                        r.add(Arrays.asList(nums[t1], nums[t2], nums[t3]));
                         // 排除重复的结果（避免三个一样元素进入list），所以需要分别移动
                         while (t2 < t3 && nums[t2] == nums[t2 + 1]) t2++;
                         while (t2 < t3 && nums[t3] == nums[t3 - 1]) t3--;
@@ -73,7 +73,7 @@ public class K015ThreeSum {
                 }
             }
         }
-        return result;
+        return r;
     }
 
     @Test
