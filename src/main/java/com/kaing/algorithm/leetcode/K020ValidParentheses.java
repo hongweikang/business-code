@@ -1,4 +1,4 @@
-package com.kaing.algorithm.leetcode.helper;
+package com.kaing.algorithm.leetcode;
 
 import org.junit.Test;
 
@@ -15,7 +15,7 @@ import static org.hamcrest.core.Is.is;
  * <p>
  * <p>
  * 利用Java栈 数据结构实现括号配对
- * JAVA栈用Deque实现，而不是原生的Stack
+ * JAVA栈用Deque实现！！，而不是原生的Stack类！
  * <p>
  * Given a string containing just the characters '(', ')', '{', '}', '[' and ']',
  * determine if the input string is valid.
