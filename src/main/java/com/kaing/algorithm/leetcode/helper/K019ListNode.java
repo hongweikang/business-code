@@ -1,7 +1,7 @@
 package com.kaing.algorithm.leetcode.helper;
 
 /**
- * User: hongweikang
+ * User: kaing
  * Date: 06/03/2017
  * Time: 2:46 PM
  */

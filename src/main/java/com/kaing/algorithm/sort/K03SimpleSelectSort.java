@@ -6,7 +6,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
 /**
- * User: hongweikang
+ * User: kaing
  * Date: 08/03/2017
  * Time: 5:41 PM
  * <p>
@@ -21,9 +21,9 @@ import static org.hamcrest.core.Is.is;
  * Time complexity best:  O(n^2)
  * Time complexity worst: O(n^2)
  */
-public class K03SimpleSelectSort {
+public class K03SimpleSelectSort implements Sortable {
 
-    private void sort(int[] d) {
+    public void sort(int[] d) {
 
         for (int i = 0; i < d.length; i++) {
             int k = i;
@@ -33,9 +33,7 @@ public class K03SimpleSelectSort {
                 }
             }
             // swap d[i], d[k]
-            int tmp = d[i];
-            d[i] = d[k];
-            d[k] = tmp;
+            swap(d, i, k);
         }
     }
 

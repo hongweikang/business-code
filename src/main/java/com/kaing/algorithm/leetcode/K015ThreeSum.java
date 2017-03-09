@@ -10,7 +10,7 @@ import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 
 /**
- * User: hongweikang
+ * User: kaing
  * Date: 02/03/2017
  * Time: 8:04 PM
  * <p>

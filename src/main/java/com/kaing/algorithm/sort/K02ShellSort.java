@@ -6,7 +6,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
 
 /**
- * User: hongweikang
+ * User: kaing
  * Date: 07/03/2017
  * Time: 4:14 PM
  * <p>
@@ -30,9 +30,9 @@ import static org.hamcrest.core.Is.is;
  * Time complexity best:  O(n)
  * Time complexity worst: O(n^2)
  */
-public class K02ShellSort {
+public class K02ShellSort implements Sortable {
 
-    private void sort(int[] d) {
+    public void sort(int[] d) {
 
         // 相当于执行了[1,.. d.length/2] 次的直接插入排序
         for (int step = d.length / 2; step > 0; step /= 2) {

@@ -1,7 +1,7 @@
 package com.kaing.algorithm.kmp;
 
 /**
- * User: hongweikang
+ * User: kaing
  * Date: 28/02/2017
  * Time: 9:13 PM
  */
