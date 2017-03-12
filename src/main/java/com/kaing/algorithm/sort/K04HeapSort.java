@@ -2,9 +2,6 @@ package com.kaing.algorithm.sort;
 
 import org.junit.Test;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.Is.is;
-
 /**
  * User: kaing
  * Date: 09/03/2017
@@ -80,11 +77,8 @@ public class K04HeapSort implements Sortable {
         }
     }
 
-
     @Test
     public void test() {
-        int[] a = new int[]{2, 4, 3, 6, 1, 7, 2, 5};
-        sort(a);
-        assertThat(a, is(new int[]{1, 2, 2, 3, 4, 5, 6, 7}));
+        testSort();
     }
 }

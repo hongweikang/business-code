@@ -2,16 +2,13 @@ package com.kaing.algorithm.sort;
 
 import org.junit.Test;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.Is.is;
-
 /**
  * User: kaing
  * Date: 09/03/2017
  * Time: 10:58 PM
  * <p>
  * <p>
- * **********交换排序：快速排序（不稳定排序）**********
+ * **********交换排序：快速排序（不稳定排序）递归实现**********
  * <pre>
  * （1）进行一趟快速排序，使得数组比key小的数都放到它前面，比key大的数都放到它后面
  *   （1.1）设置两个变量l、r，初始排序开始的时候 l=0，r=N-1
@@ -100,8 +97,6 @@ public class K06QuickSort implements Sortable {
 
     @Test
     public void test() {
-        int[] a = new int[]{2, 4, 3, 6, 1, 7, 2, 5};
-        sort(a);
-        assertThat(a, is(new int[]{1, 2, 2, 3, 4, 5, 6, 7}));
+        testSort();
     }
 }
