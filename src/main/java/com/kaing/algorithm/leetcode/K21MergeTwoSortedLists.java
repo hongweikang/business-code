@@ -14,6 +14,9 @@ import static org.hamcrest.core.Is.is;
  * <p>
  * 合并两个有序的列表到一个列表中去
  * <p>
+ * Merge two sorted linked lists and return it as a new list.
+ * The new list should be made by splicing together the nodes of the first two lists.
+ * <p>
  * <p>
  * https://leetcode.com/problems/merge-two-sorted-lists
  */

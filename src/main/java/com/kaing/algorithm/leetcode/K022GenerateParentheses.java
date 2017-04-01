@@ -16,6 +16,19 @@ import static org.junit.Assert.assertThat;
  * <p>
  * 生成成对小括号
  * <p>
+ * Given n pairs of parentheses,
+ * write a function to generate all combinations of well-formed parentheses.
+ * <p>
+ * For example, given n = 3, a solution set is:
+ * <p>
+ * [
+ * "((()))",
+ * "(()())",
+ * "(())()",
+ * "()(())",
+ * "()()()"
+ * ]
+ * <p>
  * <p>
  * https://leetcode.com/problems/generate-parentheses
  */
@@ -27,6 +40,9 @@ public class K022GenerateParentheses {
         return r;
     }
 
+    /**
+     * 采用递归方式实现
+     */
     private void generate4Recursion(List<String> r, String s, int open, int close, int n) {
         if (s.length() == 2 * n) {
             r.add(s);
