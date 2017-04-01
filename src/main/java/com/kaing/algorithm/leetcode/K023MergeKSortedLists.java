@@ -78,5 +78,4 @@ public class K023MergeKSortedLists {
         assertThat(n.next.next.next.next.next.next.next.getVal(), is(11));
     }
 
-
 }
