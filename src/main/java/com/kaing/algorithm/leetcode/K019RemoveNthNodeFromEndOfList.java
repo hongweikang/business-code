@@ -1,6 +1,6 @@
 package com.kaing.algorithm.leetcode;
 
-import com.kaing.algorithm.leetcode.helper.K019ListNode;
+import com.kaing.algorithm.leetcode.helper.ListNode;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.nullValue;
@@ -27,14 +27,14 @@ import static org.hamcrest.core.Is.is;
  */
 public class K019RemoveNthNodeFromEndOfList {
 
-    private K019ListNode removeNthFromEnd(K019ListNode head, int n) {
+    private ListNode removeNthFromEnd(ListNode head, int n) {
         if (head == null || n == 0) {
             return null;
         }
 
-        K019ListNode s = new K019ListNode(0);
+        ListNode s = new ListNode(0);
         s.next = head;
-        K019ListNode l = s, r = s;
+        ListNode l = s, r = s;
 
         for (int i = 0; i < n; i++) {
             r = r.next;
@@ -51,8 +51,8 @@ public class K019RemoveNthNodeFromEndOfList {
 
     @Test
     public void test() {
-        K019ListNode k = new K019ListNode(1);
-        K019ListNode r = removeNthFromEnd(k, 1);
+        ListNode k = new ListNode(1);
+        ListNode r = removeNthFromEnd(k, 1);
         assertThat(r, is(nullValue()));
     }
 }

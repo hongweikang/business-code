@@ -72,7 +72,19 @@ public class Test {
         System.out.println((int) l);
         // 直接操作字符，其实是用的字符在ASCII中的下标而不是字符包含的数字！
         System.out.println('a' - '6');
-        int ttt = (int)l;
+        int ttt = (int) l;
         System.out.println(ttt);
+
+//        ConcurrentModificationException
+//        List<String> ss = new ArrayList<>();
+//        ss.add("1");
+//        ss.add("2");
+//        for (String kk : ss) {
+//            if ("2".equals(kk)) {
+//                ss.remove(kk);
+//            }
+//        }
+//        System.out.println(ss.size());
+//        System.out.println(ss.get(0));
     }
 }
