@@ -68,7 +68,7 @@ public class K025ReverseNodesInkGroup {
     }
 
     @Test
-    public void test2() {
+    public void test() {
         ListNode l1 = new ListNode(1);
         ListNode l2 = new ListNode(3);
         ListNode l3 = new ListNode(2);
