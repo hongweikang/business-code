@@ -62,7 +62,7 @@ public class K034SearchForARange {
             // }
 
             if (k <= nums[m]) {
-                e = m; // not m +1
+                e = m; // not m-1
             } else {
                 s = m + 1;
             }
