@@ -20,7 +20,7 @@ import static org.hamcrest.core.Is.is;
  * <p>
  * https://leetcode.com/problems/merge-two-sorted-lists
  */
-public class K21MergeTwoSortedLists {
+public class K021MergeTwoSortedLists {
 
     /**
      * 递归计算法

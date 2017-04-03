@@ -86,5 +86,24 @@ public class Test {
 //        }
 //        System.out.println(ss.size());
 //        System.out.println(ss.get(0));
+
+        int m = 30;
+        // 左移 1：m * 2 (变得更大)
+        System.out.println(m << 1);
+        System.out.println(1 << m);
+        // 右移 1：m / 2 (变得更小)
+        System.out.println(m >> 1);
+
+        // 左移 2: m * 2 * 2
+        System.out.println(m << 2);
+        // 右移 2: m / 2 / 2
+        System.out.println(m >> 2);
+
+        int n = -30;
+        // 左移 1：m * 2 (变得更小)
+        System.out.println(n << 1);
+        // 右移 1：m / 2 (变得更大)
+        System.out.println(n >> 1);
+
     }
 }
