@@ -2,7 +2,10 @@ package com.kaing.algorithm.leetcode;
 
 import org.junit.Test;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
@@ -43,6 +46,7 @@ import static org.hamcrest.core.Is.is;
  * <p>
  * https://leetcode.com/problems/minimum-height-trees
  */
+@SuppressWarnings("unchecked")
 public class K310MinimumHeightTrees {
 
     /**
@@ -55,19 +59,20 @@ public class K310MinimumHeightTrees {
             return r;
         }
 
-        // 邻接表：用来存储整个图
-        List<List<Integer>> graph = new ArrayList<>();
+        // 邻接表：用来存储整个图（可以用List[]或List<List<Integer>>）表示
+        // List<List<Integer>> graph = new ArrayList<>();
+        List[] graph = new ArrayList[n];
         // 节点的度：用来储存每个节点度
         int[] degree = new int[n];
 
         for (int i = 0; i < n; i++) {
-            graph.add(new ArrayList<>());
+            graph[i] = new ArrayList();
         }
 
         for (int[] edge : edges) {
             // 无向图的[1,0]：表明0和1相互依赖，0和1的度也都需要+1
-            graph.get(edge[0]).add(edge[1]);
-            graph.get(edge[1]).add(edge[0]);
+            graph[edge[0]].add(edge[1]);
+            graph[edge[1]].add(edge[0]);
             degree[edge[0]]++;
             degree[edge[1]]++;
         }
@@ -100,8 +105,8 @@ public class K310MinimumHeightTrees {
                 r.add(leaf);
                 degree[leaf]--;
 
-                for (int k = 0; k < graph.get(leaf).size(); k++) {
-                    int next = graph.get(leaf).get(k);
+                for (int k = 0; k < graph[leaf].size(); k++) {
+                    int next = (int) graph[leaf].get(k);
                     if (degree[next] == 0) continue;
                     if (degree[next] == 2) {
                         queue.offer(next);
