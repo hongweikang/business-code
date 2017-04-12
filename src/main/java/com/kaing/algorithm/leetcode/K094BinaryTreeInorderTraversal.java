@@ -73,18 +73,19 @@ public class K094BinaryTreeInorderTraversal {
             return r;
         }
         Deque<TreeNode> stack = new LinkedList<>();
-        stack.push(root);
+        TreeNode node = root;
+        stack.push(node);
         while (stack.size() > 0) {
-            root = stack.pop();
-            r.add(root.val);
+            node = stack.pop();
+            r.add(node.val);
 
             // 先存入右节点到栈中
-            if (root.right != null) {
-                stack.push(root.right);
+            if (node.right != null) {
+                stack.push(node.right);
             }
             // 再存入左节点到栈中（这样：左节点先出栈，右节点再出栈）
-            if (root.left != null) {
-                stack.push(root.left);
+            if (node.left != null) {
+                stack.push(node.left);
             }
         }
         return r;
