@@ -105,5 +105,21 @@ public class Test {
         // 右移 1：m / 2 (变得更大)
         System.out.println(n >> 1);
 
+        int w = t();
+        System.out.println("---");
+        System.out.println(w);
+    }
+
+    private static int t() {
+        try {
+            throw new Exception("1");
+        } catch (Exception e) {
+            System.out.println("exit block");
+            System.exit(0);
+            return 0;
+        } finally {
+            System.out.println("finally block");
+            return 1;
+        }
     }
 }
