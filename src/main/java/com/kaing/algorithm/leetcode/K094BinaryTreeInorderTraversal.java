@@ -13,8 +13,11 @@ import static org.hamcrest.core.Is.is;
  * Date: 12/04/2017
  * Time: 11:35 PM
  * <p>
- * <p>
- * 实现树的"先序遍历"、"中序遍历"、"后续遍历"和"层序遍历"
+ * <pre>
+ * 树的遍历算法：
+ *    广度遍历（BFS）："层序遍历"
+ *    深度遍历（DFS）："先序遍历"、"中序遍历"、"后续遍历"
+ * </pre>
  * <p>
  * <p>
  * https://leetcode.com/problems/binary-tree-inorder-traversal
