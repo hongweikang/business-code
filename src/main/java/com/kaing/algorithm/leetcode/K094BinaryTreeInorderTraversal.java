@@ -3,10 +3,7 @@ package com.kaing.algorithm.leetcode;
 import com.kaing.algorithm.leetcode.helper.TreeNode;
 import org.junit.Test;
 
-import java.util.ArrayList;
-import java.util.Deque;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;
@@ -17,7 +14,7 @@ import static org.hamcrest.core.Is.is;
  * Time: 11:35 PM
  * <p>
  * <p>
- * 实现树的"先序遍历"，"中序遍历"和"后续遍历"
+ * 实现树的"先序遍历"、"中序遍历"、"后续遍历"和"层序遍历"
  * <p>
  * <p>
  * https://leetcode.com/problems/binary-tree-inorder-traversal
@@ -68,7 +65,7 @@ public class K094BinaryTreeInorderTraversal {
     /**
      * 非递归-前序遍历（采用栈实现）
      */
-    private List<Integer> preorde(TreeNode root) {
+    private List<Integer> preorder(TreeNode root) {
         if (root == null) {
             return r;
         }
@@ -94,7 +91,7 @@ public class K094BinaryTreeInorderTraversal {
     /**
      * 非递归-中序遍历（采用栈实现）
      */
-    private List<Integer> inorde(TreeNode root) {
+    private List<Integer> inorder(TreeNode root) {
         Deque<TreeNode> stack = new LinkedList<>();
         TreeNode node = root;
         while (node != null || stack.size() > 0) {
@@ -116,9 +113,9 @@ public class K094BinaryTreeInorderTraversal {
     }
 
     /**
-     * 非递归-后序遍历
+     * 非递归-后序遍历（采用栈实现）
      */
-    private List<Integer> postorde(TreeNode root) {
+    private List<Integer> postorder(TreeNode root) {
         Deque<TreeNode> stack = new LinkedList<>();
         TreeNode node = root, previous = root;
         while (node != null || stack.size() > 0) {
@@ -149,6 +146,31 @@ public class K094BinaryTreeInorderTraversal {
         return r;
     }
 
+    /**
+     * 层序遍历（采用队列实现）
+     */
+    private List<Integer> levelorder(TreeNode root) {
+        if (root == null) {
+            return r;
+        }
+        // 区别于 非递归-前序遍历（采用栈实现），这里采用的是队列
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        while (queue.size() > 0) {
+            TreeNode node = queue.poll();
+            r.add(node.val);
+
+            if (node.left != null) {
+                queue.offer(node.left);
+            }
+
+            if (node.right != null) {
+                queue.offer(node.right);
+            }
+        }
+        return r;
+    }
+
     @Test
     public void test() {
         TreeNode node6 = new TreeNode(6);
@@ -170,16 +192,20 @@ public class K094BinaryTreeInorderTraversal {
         assertThat(l.toArray(), is(new int[]{4, 5, 2, 6, 3, 1}));
 
         r = new ArrayList<>();
-        l = preorde(node1);
+        l = preorder(node1);
         assertThat(l.toArray(), is(new int[]{1, 2, 4, 5, 3, 6}));
 
         r = new ArrayList<>();
-        l = inorde(node1);
+        l = inorder(node1);
         assertThat(l.toArray(), is(new int[]{4, 2, 5, 1, 6, 3}));
 
         r = new ArrayList<>();
-        l = postorde(node1);
+        l = postorder(node1);
         assertThat(l.toArray(), is(new int[]{4, 5, 2, 6, 3, 1}));
+
+        r = new ArrayList<>();
+        l = levelorder(node1);
+        assertThat(l.toArray(), is(new int[]{1, 2, 3, 4, 5, 6}));
     }
 
 }
