@@ -105,9 +105,14 @@ public class Test {
         // 右移 1：m / 2 (变得更大)
         System.out.println(n >> 1);
 
-        int w = t();
+//        int w = t();
         System.out.println("---");
-        System.out.println(w);
+//        System.out.println(w);
+        System.out.println("ababc".contains("abc"));
+        System.out.println("abaaaaaaaabc".contains("abc"));
+
+        int p = indexOf("abaaabc".toCharArray(), 0, "abaaabc".length(), "abc".toCharArray(), 0, "abc".length(), 0);
+        System.out.println(p);
     }
 
     private static int t() {
@@ -121,5 +126,44 @@ public class Test {
             System.out.println("finally block");
             return 1;
         }
+    }
+
+    static int indexOf(char[] source, int sourceOffset, int sourceCount,
+                       char[] target, int targetOffset, int targetCount,
+                       int fromIndex) {
+        if (fromIndex >= sourceCount) {
+            return (targetCount == 0 ? sourceCount : -1);
+        }
+        if (fromIndex < 0) {
+            fromIndex = 0;
+        }
+        if (targetCount == 0) {
+            return fromIndex;
+        }
+
+        char first = target[targetOffset];
+        int max = sourceOffset + (sourceCount - targetCount);
+
+        for (int i = sourceOffset + fromIndex; i <= max; i++) {
+            /* Look for first character. */
+            if (source[i] != first) {
+                while (++i <= max && source[i] != first) ;
+            }
+
+            /* Found first character, now look at the rest of v2 */
+            if (i <= max) {
+                int j = i + 1;
+                int end = j + targetCount - 1;
+                for (int k = targetOffset + 1; j < end && source[j]
+                        == target[k]; j++, k++)
+                    ;
+
+                if (j == end) {
+                    /* Found whole string. */
+                    return i - sourceOffset;
+                }
+            }
+        }
+        return -1;
     }
 }
