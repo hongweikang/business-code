@@ -1,4 +1,4 @@
-package com.kaing.algorithm.permutation;
+package com.kaing.algorithm.math;
 
 import org.junit.Test;
 

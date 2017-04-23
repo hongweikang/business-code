@@ -14,7 +14,7 @@ import static org.hamcrest.core.Is.is;
  * （1）在全排列算法中，给出一个排列并求下一个排列
  * （2）STL有一个函数next_permutation()，它的作用是如果对于一个序列，
  *    存在按照字典排序后这个排列的下一个排列，那么就返回true且产生这个排列，否则返回false
- * （3）全排列算法: com/kaing/algorithm/permutation/Permutation.java
+ * （3）全排列算法: com/kaing/algorithm/math/Permutation.java
  * </pre>
  * <p>
  * <p>

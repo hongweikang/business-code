@@ -113,6 +113,12 @@ public class Test {
 
         int p = indexOf("abaaabc".toCharArray(), 0, "abaaabc".length(), "abc".toCharArray(), 0, "abc".length(), 0);
         System.out.println(p);
+
+        System.out.println(Math.pow(3,5));
+
+        System.out.println(1 << 0);
+        System.out.println(1 << 1);
+        System.out.println(1 << 2);
     }
 
     private static int t() {
