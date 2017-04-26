@@ -3,6 +3,7 @@
  * Date: 21/02/2017
  * Time: 2:05 PM
  */
+@SuppressWarnings("NumericOverflow")
 public class Test {
     public static void main(String[] args) {
         System.out.println(0 / 2);
@@ -114,11 +115,90 @@ public class Test {
         int p = indexOf("abaaabc".toCharArray(), 0, "abaaabc".length(), "abc".toCharArray(), 0, "abc".length(), 0);
         System.out.println(p);
 
-        System.out.println(Math.pow(3,5));
+        System.out.println(Math.pow(3, 5));
 
         System.out.println(1 << 0);
         System.out.println(1 << 1);
         System.out.println(1 << 2);
+
+        System.out.println(1 ^ 3);
+        System.out.println(9 ^ 7);
+        System.out.println((1 << 31) - 1);
+        System.out.println(Integer.MAX_VALUE);
+
+        System.out.println((1 << 31));
+        System.out.println(Integer.MIN_VALUE);
+
+        System.out.println();
+
+        System.out.println(((long) 1 << 127) - 1);
+        System.out.println(Long.MAX_VALUE);
+
+
+        System.out.println((long) 1 << 127);
+        System.out.println(Long.MIN_VALUE);
+
+        System.out.println((7 & 1) == 1);
+        System.out.println((8 & 1) == 1);
+
+        System.out.println(1 << 3);
+        System.out.println(1 << 4);
+        System.out.println(-~4);
+        System.out.println(~4 + 1);
+        System.out.println(~4);
+//        System.out.println((20560 >> (3 - 1)) & 1);
+
+        System.out.println(120010 & (120009));
+        System.out.println(128 & 1600);
+
+        int t1 = 9;
+        int t2 = 7;
+        t1 = t1 ^ t2;
+        t2 = t1 ^ t2;
+        t1 = t1 ^ t2;
+        System.out.println(t1);
+        System.out.println(t2);
+
+        int t3 = 0;
+        int x = 20000090;
+        while (x != 0) {
+            t3++;
+            x &= (x - 1);
+        }
+        System.out.println("------");
+        System.out.println(t3);
+
+        System.out.println(~12);
+        System.out.println(~13);
+        System.out.println(~14);
+
+        System.out.println(~-12);
+        System.out.println(~-13);
+        System.out.println(~-14);
+
+        System.out.println(~-9);
+
+        System.out.println(Integer.MAX_VALUE);
+        System.out.println(Long.MAX_VALUE);
+        System.out.println(((long)1 << 63) - 1);
+        System.out.println(1 << 2);
+        System.out.println(1 << 8);
+        System.out.println(1 << 9);
+        System.out.println(1 << 10);
+        System.out.println((1 << 31) -1);
+
+        System.out.println(((long)1 << 63) );
+
+        System.out.println(~9);
+        System.out.println(~-9);
+        System.out.println(-~9);
+        System.out.println(~-9);
+
+        System.out.println(1<<0);
+        System.out.println(1<<1);
+        System.out.println(1<<2);
+        System.out.println(1<<3);
+        System.out.println(1<<4);
     }
 
     private static int t() {

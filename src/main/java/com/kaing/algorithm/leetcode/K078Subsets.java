@@ -17,6 +17,8 @@ import static org.hamcrest.core.Is.is;
  * Time: 12:27 AM
  * <p>
  * <p>
+ * 位运算类题目
+ * <p>
  * （1）给定一个数组，获取这个数组的全部可能的子集
  * （2）基于位运算（Bit Manipulation）来解题
  * （3）一共有 1 << nums.length个结果
@@ -52,7 +54,7 @@ public class K078Subsets {
         for (int i = 0; i < c; i++) {
             List<Integer> tmp = new ArrayList<>();
             for (int j = 0; j < len; j++) {
-                // key point
+                // key point 两种位运算：左移 <<、按位与 &
                 if (((1 << j) & i) != 0) {
                     tmp.add(nums[j]);
                 }
@@ -78,5 +80,8 @@ public class K078Subsets {
 
         r = subsets(new int[]{1, 3, 2, 4});
         assertThat(r.size(), is(16));
+
+        r = subsets(new int[]{1, 3, 2, 4, 5});
+        assertThat(r.size(), is(32));
     }
 }
