@@ -180,25 +180,30 @@ public class Test {
 
         System.out.println(Integer.MAX_VALUE);
         System.out.println(Long.MAX_VALUE);
-        System.out.println(((long)1 << 63) - 1);
+        System.out.println(((long) 1 << 63) - 1);
         System.out.println(1 << 2);
         System.out.println(1 << 8);
         System.out.println(1 << 9);
         System.out.println(1 << 10);
-        System.out.println((1 << 31) -1);
+        System.out.println((1 << 31) - 1);
 
-        System.out.println(((long)1 << 63) );
+        System.out.println(((long) 1 << 63));
 
         System.out.println(~9);
         System.out.println(~-9);
         System.out.println(-~9);
         System.out.println(~-9);
 
-        System.out.println(1<<0);
-        System.out.println(1<<1);
-        System.out.println(1<<2);
-        System.out.println(1<<3);
-        System.out.println(1<<4);
+        System.out.println(1 << 0);
+        System.out.println(1 << 1);
+        System.out.println(1 << 2);
+        System.out.println(1 << 3);
+        System.out.println(1 << 4);
+
+        System.out.println(reverseBits(12));
+        System.out.println(1 << 1);
+        System.out.println(132 / 10);
+        System.out.println(12 % 10);
     }
 
     private static int t() {
@@ -212,6 +217,7 @@ public class Test {
             System.out.println("finally block");
             return 1;
         }
+
     }
 
     static int indexOf(char[] source, int sourceOffset, int sourceCount,
@@ -251,5 +257,17 @@ public class Test {
             }
         }
         return -1;
+    }
+
+    private static int reverseBits(int n) {
+        if (n == 0) return 0;
+
+        int result = 0;
+        for (int i = 0; i < 32; i++) {
+            result <<= 1;
+            if ((n & 1) == 1) result++;
+            n >>= 1;
+        }
+        return result;
     }
 }
