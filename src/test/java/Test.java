@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * User: kaing
  * Date: 21/02/2017
@@ -270,4 +272,12 @@ public class Test {
         }
         return result;
     }
+
+    private void t(int[][] array) {
+        // 二维数组排序
+        Arrays.sort(array, (o1, o2) -> o1[0] - o2[0]);
+
+        int[][] data = new int[][]{{10, 16}, {2, 8}, {1, 6}, {7, 12}};
+    }
+
 }
