@@ -13,6 +13,8 @@ import static org.hamcrest.core.Is.is;
  * Time: 8:34 PM
  * <p>
  * <p>
+ * HULU面试题
+ * <p>
  * 问题抽象为：给定N个区间，针对两个区间，如果区间重叠，则即为1， 如果不重叠，则即为2
  * 求最后的结果
  * <p>

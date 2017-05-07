@@ -206,6 +206,10 @@ public class Test {
         System.out.println(1 << 1);
         System.out.println(132 / 10);
         System.out.println(12 % 10);
+
+        System.out.println(Math.sqrt(16.0));
+        System.out.println(Math.sqrt(-16.0));
+        System.out.println(9 / 9);
     }
 
     private static int t() {
